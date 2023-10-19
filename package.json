@@ -1,0 +1,22 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is namaste react course",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnkitKr625/namaste-react.git"
+  },
+  "author": "Ankit Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnkitKr625/namaste-react/issues"
+  },
+  "homepage": "https://github.com/AnkitKr625/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.10.0"
+  }
+}
