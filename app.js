@@ -43,6 +43,7 @@ const Title =  () => (<h1>This is title component</h1>);
 const FunctionComponent = () => (
   <div>
     <Title/>
+    {child1}
     This is functional Component</div>
 )
 
