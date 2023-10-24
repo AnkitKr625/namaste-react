@@ -38,11 +38,15 @@ const headingContainer = createElement(
   [child1, child2]
 )
 
-const jsxHeading = <h1>This is heading from JSX</h1>
+const Title =  () => (<h1>This is title component</h1>);
 
-const FunctionComponent = () => {
-  return <>This is functional Component</>
-}
+const FunctionComponent = () => (
+  <div>
+    <Title/>
+    This is functional Component</div>
+)
+
+console.log(Title)
 
 const rootReact = createRoot(document.getElementById("root"));
 
