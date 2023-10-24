@@ -38,6 +38,17 @@ const headingContainer = createElement(
   [child1, child2]
 )
 
+const Title =  () => (<h1>This is title component</h1>);
+
+const FunctionComponent = () => (
+  <div>
+    <Title/>
+    {child1}
+    This is functional Component</div>
+)
+
+console.log(Title)
+
 const rootReact = createRoot(document.getElementById("root"));
 
-rootReact.render(headingContainer);
+rootReact.render(<FunctionComponent/>);
