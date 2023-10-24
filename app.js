@@ -38,6 +38,8 @@ const headingContainer = createElement(
   [child1, child2]
 )
 
+const jsxHeading = <h1>This is heading from JSX</h1>
+
 const rootReact = createRoot(document.getElementById("root"));
 
-rootReact.render(headingContainer);
+rootReact.render(jsxHeading);
