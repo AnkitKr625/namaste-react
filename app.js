@@ -40,6 +40,10 @@ const headingContainer = createElement(
 
 const jsxHeading = <h1>This is heading from JSX</h1>
 
+const FunctionComponent = () => {
+  return <>This is functional Component</>
+}
+
 const rootReact = createRoot(document.getElementById("root"));
 
-rootReact.render(jsxHeading);
+rootReact.render(<FunctionComponent/>);
