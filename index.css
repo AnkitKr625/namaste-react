@@ -20,7 +20,7 @@
 }
 
 .body {
-  
+  font-family: 'Poppins', sans-serif;
 }
 
 .search-container {
@@ -50,6 +50,7 @@
 
 .restaurant-card:hover {
   box-shadow: 0 0 10px gray;
+  scale: 0.9;
 }
 
 .restaurant-img {
@@ -65,6 +66,11 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  font-size: 12px;
+}
+
+.res-area {
+  font-size: 12px;
 }
 
 .res-rating {

@@ -1,4 +1,5 @@
 import Rating from "../assets/Rating.js";
+import { CDN_URL } from "../utils/constant.js";
 
 function RestaurantCard({ info }) {
   const {
@@ -14,7 +15,7 @@ function RestaurantCard({ info }) {
       <div className="restaurant-img-container">
         <img
           className="restaurant-img"
-          src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${imageId}`}
+          src={CDN_URL + imageId}
           alt="res-logo"
         />
       </div>
@@ -26,7 +27,7 @@ function RestaurantCard({ info }) {
           {` . ${sla.deliveryTime} min`}
         </div>
         <p className="res-cuisines">{cuisines.join(",")}</p>
-        <div>{areaName}</div>
+        <div className="res-area">{areaName}</div>
       </div>
     </div>
   );
