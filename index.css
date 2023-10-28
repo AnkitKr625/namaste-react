@@ -44,7 +44,7 @@
   border-radius: 8px;
   padding: 8px;
   width: 200px;
-  height: 300px;
+  height: 276px;
   cursor: pointer;
 }
 
@@ -65,4 +65,12 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.res-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 600;
 }
