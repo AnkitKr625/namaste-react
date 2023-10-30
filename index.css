@@ -27,6 +27,12 @@
   padding: 8px;
 }
 
+.btn {
+  padding: 4px 6px;
+  margin: 4px;
+  border-radius: 4px;
+}
+
 .restaurant-container {
   display: flex;
   flex-wrap: wrap;
