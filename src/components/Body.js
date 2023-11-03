@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import RestaurantCard from "./RestaurantCard";
-import { restaurantData } from "../data/restaurant";
 import { API_URL } from "../utils/constant";
 
 function Body() {
-  const [resList, setResList] = useState(restaurantData);
+  const resListData = useRef([]);
+  const [resList, setResList] = useState(resListData.current);
 
   function filterResList() {
     const filteredRes = resList.filter((res) => res.info.avgRating > 4);
@@ -14,9 +14,9 @@ function Body() {
   async function fetchData() {
     const response = await fetch(API_URL);
     const data = await response.json();
-    setResList(
-      data.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
-    );
+    resListData.current =
+      data.data.cards[2].card.card.gridElements.infoWithStyle.restaurants;
+    setResList(resListData.current);
   }
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function Body() {
           Top Rated Restaurant
         </button>
         <button
-          onClick={() => setResList(restaurantData)}
+          onClick={() => setResList(resListData.current)}
           className="btn reset-btn"
         >
           Reset

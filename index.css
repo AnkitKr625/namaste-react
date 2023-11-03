@@ -68,6 +68,12 @@
   text-align: left;
 }
 
+.res-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .res-cuisines {
   text-overflow: ellipsis;
   overflow: hidden;
