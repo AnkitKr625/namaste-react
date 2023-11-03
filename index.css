@@ -29,8 +29,13 @@
 
 .btn {
   padding: 4px 6px;
-  margin: 4px;
+  margin: 8px;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  scale: 1.1;
 }
 
 .restaurant-container {
