@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import RestaurantCard from "./RestaurantCard";
+import RestaurantCardShimmer from "./Shimmer/RestaurantCardShimmer";
 import { API_URL } from "../utils/constant";
 
 function Body() {
@@ -36,11 +37,19 @@ function Body() {
           Reset
         </button>
       </div>
-      <div className="restaurant-container">
-        {resList.map((resData) => (
-          <RestaurantCard key={resData.info.id} info={resData.info} />
-        ))}
-      </div>
+      {resList?.length > 0 ? (
+        <div className="restaurant-container">
+          {resList.map((resData) => (
+            <RestaurantCard key={resData.info.id} info={resData.info} />
+          ))}
+        </div>
+      ) : (
+        <div className="restaurant-container">
+          {[...Array(15).keys()].map((i) => (
+            <RestaurantCardShimmer key={i} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

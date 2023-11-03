@@ -92,3 +92,30 @@
   font-size: 16px;
   font-weight: 600;
 }
+
+.res-card-s {
+  width: 200px;
+  height: 276px;
+  border-radius: 12px;
+}
+
+.shimmer {
+  background: #80808033;
+  background-image: linear-gradient(to right, #80808033 0%, #80808036 20%, #80808033 100%);
+  background-repeat: no-repeat;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; 
+  animation-iteration-count: infinite;
+  animation-name: shimmerAnimation;
+  animation-timing-function: linear;
+  }
+
+  @keyframes shimmerAnimation {
+    0% {
+      background-position: -468px 0;
+    }
+    
+    100% {
+      background-position: 468px 0; 
+    }
+  }
