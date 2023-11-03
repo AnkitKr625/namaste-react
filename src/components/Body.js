@@ -13,11 +13,15 @@ function Body() {
   }
 
   async function fetchData() {
-    const response = await fetch(API_URL);
-    const data = await response.json();
-    resListData.current =
-      data.data.cards[2].card.card.gridElements.infoWithStyle.restaurants;
-    setResList(resListData.current);
+    try {
+      const response = await fetch(API_URL);
+      const data = await response.json();
+      resListData.current =
+        data.data.cards[2].card.card.gridElements.infoWithStyle.restaurants;
+      setResList(resListData.current);
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   useEffect(() => {
