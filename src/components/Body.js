@@ -6,6 +6,7 @@ import { API_URL } from "../utils/constant";
 function Body() {
   const resListData = useRef([]);
   const [resList, setResList] = useState(resListData.current);
+  const [searchQuery, setSearchQuery] = useState("");
 
   function filterResList() {
     const filteredRes = resList.filter((res) => res.info.avgRating > 4);
@@ -30,16 +31,37 @@ function Body() {
 
   return (
     <div className="body">
-      <div className="search-container">
-        <button onClick={filterResList} className="btn top-rated-btn">
-          Top Rated Restaurant
-        </button>
-        <button
-          onClick={() => setResList(resListData.current)}
-          className="btn reset-btn"
-        >
-          Reset
-        </button>
+      <div className="top-container">
+        <div>
+          <button onClick={filterResList} className="btn top-rated-btn">
+            Top Rated Restaurant
+          </button>
+          <button
+            onClick={() => setResList(resListData.current)}
+            className="btn reset-btn"
+          >
+            Reset
+          </button>
+        </div>
+        <div className="search-container">
+          <input
+            className="input"
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <button
+            className="btn"
+            onClick={() => {
+              const filteredRes = resListData.current.filter((res) =>
+                res.info.name.toLowerCase().includes(searchQuery.toLowerCase())
+              );
+              setResList(filteredRes);
+            }}
+          >
+            Search
+          </button>
+        </div>
       </div>
       {resList?.length > 0 ? (
         <div className="restaurant-container">

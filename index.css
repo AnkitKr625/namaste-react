@@ -23,8 +23,21 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.top-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px;
+}
+
 .search-container {
   padding: 8px;
+}
+
+.input {
+  padding: 4px 6px;
+  margin: 8px;
+  border-radius: 4px;
 }
 
 .btn {
