@@ -23,14 +23,32 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.top-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px;
+}
+
 .search-container {
   padding: 8px;
 }
 
+.input {
+  padding: 4px 6px;
+  margin: 8px;
+  border-radius: 4px;
+}
+
 .btn {
   padding: 4px 6px;
-  margin: 4px;
+  margin: 8px;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  scale: 1.1;
 }
 
 .restaurant-container {
@@ -68,6 +86,12 @@
   text-align: left;
 }
 
+.res-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .res-cuisines {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -86,3 +110,30 @@
   font-size: 16px;
   font-weight: 600;
 }
+
+.res-card-s {
+  width: 200px;
+  height: 276px;
+  border-radius: 12px;
+}
+
+.shimmer {
+  background: #80808033;
+  background-image: linear-gradient(to right, #80808033 0%, #80808036 20%, #80808033 100%);
+  background-repeat: no-repeat;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; 
+  animation-iteration-count: infinite;
+  animation-name: shimmerAnimation;
+  animation-timing-function: linear;
+  }
+
+  @keyframes shimmerAnimation {
+    0% {
+      background-position: -468px 0;
+    }
+    
+    100% {
+      background-position: 468px 0; 
+    }
+  }
