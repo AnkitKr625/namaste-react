@@ -2,23 +2,26 @@ import { createRoot } from "react-dom/client";
 import Header from "./components/Header.js";
 import Body from "./components/Body.js";
 import About from "./components/About.js";
+import Error from "./components/Error.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Body/>
+    path: "/",
+    element: <Body />,
+    errorElement: <Error />,
   },
   {
-    path: '/about',
-    element: <About/>
-  }
-])
+    path: "/about",
+    element: <About />,
+  },
+]);
 
 const App = () => (
   <div className="app">
-    <Header />
-    <RouterProvider router={router}/>
+    <RouterProvider router={router}>
+      <Header />
+    </RouterProvider>
   </div>
 );
 
